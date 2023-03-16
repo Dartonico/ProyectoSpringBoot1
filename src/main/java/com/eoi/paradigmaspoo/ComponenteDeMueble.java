@@ -1,4 +1,4 @@
-package com.eoi.paradigmaspoo;
+package com.eoi.paradigmasPOO;
 
 /**
  * The type Componente de mueble.
