@@ -1,4 +1,4 @@
-package com.eoi.paradigmasPOO;
+package com.eoi.paradigmaspoo;
 
 /**
  * The type Componente de mueble.
@@ -29,18 +29,38 @@ public abstract class ComponenteDeMueble extends ObjetoFisico {
         super.showInfo();
     }
 
+    /**
+     * Gets color.
+     *
+     * @return the color
+     */
     public String getColor() {
         return color;
     }
 
+    /**
+     * Sets color.
+     *
+     * @param color the color
+     */
     public void setColor(String color) {
         this.color = color;
     }
 
+    /**
+     * Gets posicion.
+     *
+     * @return the posicion
+     */
     public String getPosicion() {
         return posicion;
     }
 
+    /**
+     * Sets posicion.
+     *
+     * @param posicion the posicion
+     */
     public void setPosicion(String posicion) {
         this.posicion = posicion;
     }

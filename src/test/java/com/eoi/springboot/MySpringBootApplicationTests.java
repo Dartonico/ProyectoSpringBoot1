@@ -15,15 +15,9 @@ import org.springframework.http.ResponseEntity;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 
-
-
-
 /**
-
  * The type Demo application tests.
-
  */
-
 @SpringBootTest(classes = MySpringBootApplication.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 
 @Log4j2
@@ -37,18 +31,12 @@ class MySpringBootApplicationTests {
 	private TestRestTemplate template;
 
 
-
-	/**
-
-	 * Hello main.
-
-	 *
-
-	 * @throws Exception the exception
-
-	 */
-
-	@Test
+    /**
+     * Hello main.
+     *
+     * @throws Exception the exception
+     */
+    @Test
 
 	void hello_main() throws Exception {
 
@@ -59,18 +47,12 @@ class MySpringBootApplicationTests {
 	}
 
 
-
-	/**
-
-	 * Hello hola.
-
-	 *
-
-	 * @throws Exception the exception
-
-	 */
-
-	@Test
+    /**
+     * Hello hola.
+     *
+     * @throws Exception the exception
+     */
+    @Test
 
 	void hello_hola() throws Exception {
 

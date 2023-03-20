@@ -1,4 +1,4 @@
-package com.eoi.paradigmasPOO;
+package com.eoi.paradigmaspoo;
 
 import org.springframework.stereotype.Component;
 
@@ -6,11 +6,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * The type Mueble.
+ * The type Mueble. La clase mueble, comprende aquellos objetos fisisiqcos que tienen una habitacion.
+ * Ademas, todos los objetos de la clase Mueble, tienen un ArrayList de Componentes de Mueble(ComponenteDeMueble.class)
  */
 @Component
 public abstract class Mueble extends ObjetoFisico {
-
+    //Define la habitacion en la que se encuentra el mueble
+    /**
+     * Se utiliza para guardar el nombre de la habitacion en la que se encuentra el mueble.
+     */
     private String habitacion;
 
     /**
@@ -67,6 +71,9 @@ public abstract class Mueble extends ObjetoFisico {
         this.componentes = componentes;
     }
 
+    /**
+     * El metodo showInfo muestra en pantalla la informacion basica de un objeto fisico.
+     */
     @Override
     public void showInfo() {
         System.out.println("FICHA DE MUEBLE");
@@ -77,5 +84,13 @@ public abstract class Mueble extends ObjetoFisico {
             ObjetoFisico o =  n;
             o.showInfo();
         });
+    }
+
+    public String getHabitacion() {
+        return habitacion;
+    }
+
+    public void setHabitacion(String habitacion) {
+        this.habitacion = habitacion;
     }
 }

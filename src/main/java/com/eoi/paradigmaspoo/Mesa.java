@@ -1,4 +1,4 @@
-package com.eoi.paradigmasPOO;
+package com.eoi.paradigmaspoo;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -14,7 +14,6 @@ public class Mesa extends Mueble {
     private ComponenteDeMueble pata3;
     private ComponenteDeMueble pata4;
     private ComponenteDeMueble tablero;
-
 
 
     /**

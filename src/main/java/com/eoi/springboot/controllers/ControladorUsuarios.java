@@ -2,65 +2,56 @@ package com.eoi.springboot.controllers;
 
 import lombok.extern.log4j.Log4j2;
 
+
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import org.springframework.web.bind.annotation.RestController;
 
 
-
 /**
-
  * The type Controlador usuarios.
-
  */
-
 @RestController
 
 @Log4j2
 
 public class ControladorUsuarios {
 
+    @Value("${mensaje.hola}")
+    private String mensajehola;
+    @Value("${mensaje.mimedicacion}")
+    private String mimedicacion;
 
 
     /**
-
      * Hola string.
-
      *
-
      * @return the string
-
      */
-
-    @GetMapping("/hola")
+    @GetMapping("${url.hola}")
 
     String hola() {
 
-        log.warn("Hola Mundo!1");
+        log.warn(mensajehola);
 
-        return "Hola mundo!3";
+        return mensajehola;
 
     }
 
 
-
     /**
-
      * Mi medicacion string.
-
      *
-
      * @return the string
-
      */
+    @GetMapping("${url.mimedicacion}")
 
-    @GetMapping("/mimedicacion")
+    String mimedicacion() {
 
-    String miMedicacion() {
+        log.warn(mimedicacion);
 
-        log.warn("Tomate las pastillas");
-
-        return "Tomate las pastillas";
+        return mimedicacion;
 
     }
 
