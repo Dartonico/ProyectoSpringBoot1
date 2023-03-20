@@ -35,6 +35,7 @@ public class DemoParadigmasPOOSpring implements CommandLineRunner {
     @Override
     public void run(String... args ) throws  Exception
     {
+        //INVERSION DE CONTROL
         //mesa.showInfo();
         mesaRandom.showInfo();
     }

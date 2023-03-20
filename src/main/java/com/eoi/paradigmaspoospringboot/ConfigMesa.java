@@ -55,6 +55,10 @@ public class ConfigMesa {
     @Autowired
     @Value("${mesa.numeropatas}")
     private int numeropatas;
+    @Autowired
+    @Value("${mesa.maxnumeropatas}")
+    private int maxnumeropatas;
+
 
     /**
      * Configpatas config patas.
@@ -94,9 +98,16 @@ public class ConfigMesa {
     @Bean(value="mesaRandom")
     public Mesa mesaRandom()
     {
+        //Creo la lista de componentes de la mesa
         List<ComponenteDeMueble> componentsList = new ArrayList<>();
+
+        //Creo la herramienta de generacion de numeros aleatorios
         SecureRandom secureRandom = new SecureRandom();
-        numeropatas = secureRandom.nextInt(20);
+
+        //Calculamos el numero de patas aleatorio entre 0 y 20 (incluido-Expluido)
+        //numeropatas = secureRandom.nextInt(21);
+        numeropatas = secureRandom.nextInt(maxnumeropatas);
+
         alto = secureRandom.nextInt(10);
         ancho = secureRandom.nextInt(10);
         fondo = secureRandom.nextInt(10);
